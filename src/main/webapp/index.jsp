@@ -69,7 +69,7 @@
       </div>
       <div class="navbar navbar-dark bg-dark box-shadow" style=" background-color:#f2f2f2!important;">
         <div class="container d-flex justify-content-between">
-          <h2>Jenkins-CICD Groovy Pipeline with Docker Lab</h2
+          <h2>Jenkins-CICD Groovy Pipeline with Docker Lab- Test</h2
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
