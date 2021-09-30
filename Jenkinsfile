@@ -31,7 +31,7 @@ node{
             def scriptRunner='sudo ./stopscript.sh'           
             def dockerRun= "sudo docker run -p 8082:8080 -d --name ${dockerContainerName} ${dockerImageName}" 
             withCredentials([string(credentialsId: 'deploymentserverpwd', variable: 'dpPWD')]) {
-                  sh "sshpass -p ${dpPWD} ssh -tt -o StrictHostKeyChecking=no netadmin@40.88.22.236" 
+                  sh "sshpass -p ${dpPWD} ssh -o StrictHostKeyChecking=no netadmin@40.88.22.236" 
                   sh "sshpass -p ${dpPWD} scp -r stopscript.sh netadmin@40.88.22.236:/home/netadmin" 
                   sh "sshpass -p ${dpPWD} ssh -tt -o StrictHostKeyChecking=no netadmin@40.88.22.236 ${changingPermission}"
                   sh "sshpass -p ${dpPWD} ssh -tt -o StrictHostKeyChecking=no netadmin@40.88.22.236 ${scriptRunner}"
