@@ -29,7 +29,7 @@ node{
             def dockerContainerName = 'javadockerapp_$JOB_NAME_$BUILD_NUMBER'
             def changingPermission='sudo chmod +x stopscript.sh'
             def scriptRunner='sudo ./stopscript.sh'           
-            def dockerRun= "sudo docker run -p 8082:8080 -d --name ${dockerContainerName} ${dockerImageName}" 
+            def dockerRun= "sudo docker run -p 8083:8080 -d --name ${dockerContainerName} ${dockerImageName}" 
             withCredentials([string(credentialsId: 'deploymentserverpwd', variable: 'dpPWD')]) {
                   sh "sshpass -p ${dpPWD} ssh -o StrictHostKeyChecking=no netadmin@40.88.22.236" 
                   sh "sshpass -p ${dpPWD} scp -r stopscript.sh netadmin@40.88.22.236:/home/netadmin" 
